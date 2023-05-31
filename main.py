@@ -1,3 +1,4 @@
+import os
 import random
 import string
 
@@ -194,6 +195,20 @@ async def ans5(ctx, ans5):
         fileAns5 = open("ans5.txt", "a")
         fileAns5.write("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans5))
         print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans5))
+
+
+@bot.command(name="endgame")
+async def endgame(ctx):
+
+
+
+@bot.command(name="cleangame")
+async def cleangame(ctx):
+    os.remove("ans1.txt")
+    os.remove("ans2.txt")
+    os.remove("ans3.txt")
+    os.remove("ans4.txt")
+    os.remove("ans5.txt")
 
 
 bot.run(TOKEN)
