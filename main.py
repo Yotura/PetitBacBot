@@ -167,7 +167,7 @@ async def ans3(ctx, ans3):
         print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans3))
 
 @bot.command(name="ans4")
-async def ans1(ctx, ans4):
+async def ans4(ctx, ans4):
     fileAns4 = open("ans4.txt", "r")
     strAuthor = str(ctx.message.author)
     if fileAns4.read().__contains__(strAuthor):
@@ -179,14 +179,14 @@ async def ans1(ctx, ans4):
         print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans4))
 
 @bot.command(name="ans5")
-async def ans1(ctx, ans5):
+async def ans5(ctx, ans5):
     fileAns5 = open("ans5.txt", "r")
     strAuthor = str(ctx.message.author)
     if fileAns5.read().__contains__(strAuthor):
         print("[Answer commands] You have already given an answer !")
         await ctx.send("[Answer commands] You have already given an answer !")
     else:
-        fileAns5 = open("ans1.txt", "a")
+        fileAns5 = open("ans5.txt", "a")
         fileAns5.write("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans5))
         print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans5))
 
