@@ -142,53 +142,53 @@ async def ans1(ctx, ans1):
         fileAns1.write("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans1))
         print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans1))
 
-@bot.command(name="ans1")
-async def ans1(ctx, ans1):
-    fileAns1 = open("ans1.txt", "r")
+@bot.command(name="ans2")
+async def ans2(ctx, ans2):
+    fileAns2 = open("ans2.txt", "r")
     strAuthor = str(ctx.message.author)
-    if fileAns1.read().__contains__(strAuthor):
+    if fileAns2.read().__contains__(strAuthor):
         print("[Answer commands] You have already given an answer !")
         await ctx.send("[Answer commands] You have already given an answer !")
     else:
-        fileAns1 = open("ans1.txt", "a")
-        fileAns1.write("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans1))
-        print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans1))
+        fileAns2 = open("ans2.txt", "a")
+        fileAns2.write("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans2))
+        print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans2))
 
-@bot.command(name="ans1")
-async def ans1(ctx, ans1):
-    fileAns1 = open("ans1.txt", "r")
+@bot.command(name="ans3")
+async def ans3(ctx, ans3):
+    fileAns3 = open("ans3.txt", "r")
     strAuthor = str(ctx.message.author)
-    if fileAns1.read().__contains__(strAuthor):
+    if fileAns3.read().__contains__(strAuthor):
         print("[Answer commands] You have already given an answer !")
         await ctx.send("[Answer commands] You have already given an answer !")
     else:
-        fileAns1 = open("ans1.txt", "a")
-        fileAns1.write("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans1))
-        print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans1))
+        fileAns3 = open("ans3.txt", "a")
+        fileAns3.write("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans3))
+        print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans3))
 
-@bot.command(name="ans1")
-async def ans1(ctx, ans1):
-    fileAns1 = open("ans1.txt", "r")
+@bot.command(name="ans4")
+async def ans1(ctx, ans4):
+    fileAns4 = open("ans4.txt", "r")
     strAuthor = str(ctx.message.author)
-    if fileAns1.read().__contains__(strAuthor):
+    if fileAns4.read().__contains__(strAuthor):
         print("[Answer commands] You have already given an answer !")
         await ctx.send("[Answer commands] You have already given an answer !")
     else:
-        fileAns1 = open("ans1.txt", "a")
-        fileAns1.write("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans1))
-        print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans1))
+        fileAns4 = open("ans4.txt", "a")
+        fileAns4.write("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans4))
+        print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans4))
 
-@bot.command(name="ans1")
-async def ans1(ctx, ans1):
-    fileAns1 = open("ans1.txt", "r")
+@bot.command(name="ans5")
+async def ans1(ctx, ans5):
+    fileAns5 = open("ans5.txt", "r")
     strAuthor = str(ctx.message.author)
-    if fileAns1.read().__contains__(strAuthor):
+    if fileAns5.read().__contains__(strAuthor):
         print("[Answer commands] You have already given an answer !")
         await ctx.send("[Answer commands] You have already given an answer !")
     else:
-        fileAns1 = open("ans1.txt", "a")
-        fileAns1.write("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans1))
-        print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans1))
+        fileAns5 = open("ans1.txt", "a")
+        fileAns5.write("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans5))
+        print("{0}".format(ctx.message.author) + " answered : {0}\n".format(ans5))
 
 
 bot.run(TOKEN)
