@@ -132,6 +132,7 @@ async def topicsanouncementglobal(ctx):
 # Player Part
 @bot.command(name="ans1")
 async def ans1(ctx, ans1):
+    fileAns1 = open("ans1.txt", "a")
     fileAns1 = open("ans1.txt", "r")
     strAuthor = str(ctx.message.author)
     if fileAns1.read().__contains__(strAuthor):
@@ -144,6 +145,7 @@ async def ans1(ctx, ans1):
 
 @bot.command(name="ans2")
 async def ans2(ctx, ans2):
+    fileAns2 = open("ans2.txt", "a")
     fileAns2 = open("ans2.txt", "r")
     strAuthor = str(ctx.message.author)
     if fileAns2.read().__contains__(strAuthor):
@@ -156,6 +158,7 @@ async def ans2(ctx, ans2):
 
 @bot.command(name="ans3")
 async def ans3(ctx, ans3):
+    fileAns3 = open("ans3.txt", "a")
     fileAns3 = open("ans3.txt", "r")
     strAuthor = str(ctx.message.author)
     if fileAns3.read().__contains__(strAuthor):
@@ -168,6 +171,7 @@ async def ans3(ctx, ans3):
 
 @bot.command(name="ans4")
 async def ans4(ctx, ans4):
+    fileAns4 = open("ans4.txt", "a")
     fileAns4 = open("ans4.txt", "r")
     strAuthor = str(ctx.message.author)
     if fileAns4.read().__contains__(strAuthor):
@@ -180,6 +184,7 @@ async def ans4(ctx, ans4):
 
 @bot.command(name="ans5")
 async def ans5(ctx, ans5):
+    fileAns5 = open("ans5.txt", "a")
     fileAns5 = open("ans5.txt", "r")
     strAuthor = str(ctx.message.author)
     if fileAns5.read().__contains__(strAuthor):
