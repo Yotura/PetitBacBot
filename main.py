@@ -35,6 +35,21 @@ async def computeringReport():
     print("MEM%:", my_process.memory_percent())
 
 
+@bot.command(name="join")
+async def join(ctx):
+    filePlayersList = open("players.txt", "a")
+    filePlayersList = open("players.txt", "r")
+    player = str(ctx.message.author)
+    if filePlayersList.read().__contains__(player):
+        print("jtm")
+    else:
+        filePlayersList = open("players.txt", "a")
+        filePlayersList.write(player + "\n")
+
+
+
+
+
 # MJ Part
 varTopic1Global = "0"
 varTopic2Global = "0"
@@ -233,13 +248,38 @@ async def ans5(ctx, ans5):
 
 
 @bot.command(name="verify1")
-async def verify1(ctx):
+async def verify1(ctx, i=0):
+    global goodForAns1
     await computeringReport()
     fileAns1Verif = open("ans1.txt", "r")
     varVerifAns1 = fileAns1Verif.read()
+    filePlayersList = open("players.txt", "r")
+    filePlayersListLines = len(filePlayersList.readlines())
+    filePlayersListLines - 1
+    goodForAns1 = [filePlayersListLines]
+    while i < filePlayersListLines:
+        filePlayersList = open("players.txt", "r")
+        fileAns1Verif = open("ans1.txt", "r")
+        i = i + 1
+        with open("players.txt", "r") as filePlayersList:
+            ligne = filePlayersList.readline()
+            while ligne != "":
+                ligne = filePlayersList.readline()
+        with open("ans1.txt", "r") as fileAns1Verif:
+            ligne2 = fileAns1Verif.readline()
+            while ligne2 != "":
+                ligne2 = fileAns1Verif.readline()
 
-    print("[Verify Command] Answers for the question 1 : " + varVerifAns1)
-    await ctx.send("[Verify Command] Answers for the question 1 : " + varVerifAns1)
+        if ligne2.__contains__(ligne):
+            print(ligne)
+            print(ligne2)
+            goodForAns1.append(i)
+            goodForAns1Bol = True
+
+    if goodForAns1[-1] == goodForAns1[0]:
+        if goodForAns1Bol == True:
+            print("[Verify Command] Answers for the question 1 : " + varVerifAns1)
+            await ctx.send("[Verify Command] Answers for the question 1 : " + varVerifAns1)
 
 
 @bot.command(name="verify2")
@@ -314,6 +354,11 @@ async def cleangame(ctx):
         print("test4587")
     try:
         os.remove("ans5.txt")
+    except FileNotFoundError:
+        print("test4587")
+    try:
+        filePlayersList.close()
+        os.remove("players.txt")
     except FileNotFoundError:
         print("test4587")
 
