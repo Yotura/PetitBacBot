@@ -9,3 +9,4 @@ venv
 .gitattributes
 filepoints.txt
 players.txt
+token.txt
