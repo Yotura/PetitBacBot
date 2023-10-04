@@ -9,7 +9,8 @@ from discord.ext import commands
 
 bot = discord.client
 bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
-TOKEN = "MTEwNDQ0MDI3NTEzNDMxNjY4NA.G7zbIi.AujXs_IZl2fUfhIVfG7yuF_LdiRjJ65ofUaRkE"
+token = open("token.txt", "r")
+TOKEN = token.read()
 
 
 @bot.event
